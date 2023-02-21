@@ -175,6 +175,8 @@
   }
 
   @media (max-width: $max-mobile-width) {
+    z-index: 100;
+
     &--menu-opened {
       position: absolute;
       right: 0;
@@ -215,6 +217,10 @@
 .main-nav__item {
   @media (min-width: $tablet-width) {
     position: relative;
+
+    &--curent {
+      color: $color-brand;
+    }
 
     &--curent::after {
       position: absolute;

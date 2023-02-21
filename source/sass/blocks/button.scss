@@ -1,0 +1,19 @@
+.button {
+  @include font-values(400, 16px, 1.50, $main-color);
+  display: block;
+  text-align: center;
+  background-color: $color-brand;
+  border-radius: 4px;
+  padding: 8px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.1s;
+
+  &:hover {
+    background-color: $color-brand-tertiary;
+  }
+
+  &:active {
+    background-color: $color-brand-quaternary;
+  }
+}
