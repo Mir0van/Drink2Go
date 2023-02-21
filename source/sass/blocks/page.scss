@@ -1,0 +1,12 @@
+.page__body {
+  font-family: $font-main;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.43;
+  background-color: $main-color;
+  color: $main-color-text;
+
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+}
