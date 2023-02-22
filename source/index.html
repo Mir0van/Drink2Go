@@ -282,12 +282,15 @@
           <div class="catalog__cards">
             <div class="catalog__select-wrapper">
               <span class="catalog__select-description">Сортировка:</span>
-              <select class="catalog__select" name="sorting">
-                <option value="default">по умолчанию</option>
-                <option value="cheap">сначала дорогие</option>
-                <option value="expensive">сначала дешёвые</option>
-                <option value="high-rating">высокий рейтинг</option>
-              </select>
+              <div class="catalog__select-container">
+                <select class="catalog__select catalog__select--closed" name="sorting">
+                  <option value="default">по умолчанию</option>
+                  <option value="cheap">сначала дорогие</option>
+                  <option value="expensive">сначала дешёвые</option>
+                  <option value="high-rating">высокий рейтинг</option>
+                </select>
+                <span class="catalog__select-decorate"></span>
+              </div>
             </div>
             <ul class="catalog__list">
               <li class="catalog__item card">
@@ -302,7 +305,7 @@
                 <a class="card__link-title" href="#">
                   <h3 class="card__title">Декаф Флэт Уайт</h3>
                 </a>
-                <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                 <b class="card__price">225₽</b>
                 <a class="card__button button" href="#">В корзину</a>
               </li>
@@ -318,7 +321,7 @@
                 <a class="card__link-title" href="#">
                   <h3 class="card__title">Декаф Флэт Уайт</h3>
                 </a>
-                <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                 <b class="card__price">225₽</b>
                 <a class="card__button button" href="#">В корзину</a>
               </li>
@@ -334,7 +337,7 @@
                 <a class="card__link-title" href="#">
                   <h3 class="card__title">Декаф Флэт Уайт</h3>
                 </a>
-                <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                 <b class="card__price">225₽</b>
                 <a class="card__button button" href="#">В корзину</a>
               </li>
@@ -350,7 +353,7 @@
                 <a class="card__link-title" href="#">
                   <h3 class="card__title">Декаф Флэт Уайт</h3>
                 </a>
-                <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                 <b class="card__price">225₽</b>
                 <a class="card__button button" href="#">В корзину</a>
               </li>
@@ -366,7 +369,7 @@
                 <a class="card__link-title" href="#">
                   <h3 class="card__title">Декаф Флэт Уайт</h3>
                 </a>
-                <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                 <b class="card__price">225₽</b>
                 <a class="card__button button" href="#">В корзину</a>
               </li>
@@ -382,29 +385,30 @@
                 <a class="card__link-title" href="#">
                   <h3 class="card__title">Декаф Флэт Уайт</h3>
                 </a>
-                <p class="card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком</p>
+                <p class="card__description">Кофе без кофеина из Эфиопии с&nbsp;натуральным фермерским молоком</p>
                 <b class="card__price">225₽</b>
                 <a class="card__button button" href="#">В корзину</a>
               </li>
             </ul>
             <ul class="catalog__pagination pagination">
+              <!-- pagination__item--hidden  когда current 1 или 3-->
               <li class="pagination__item pagination__item--back">
                 <a class="pagination__link" href="#">
-                  <span class="pagination__text">Назад</span>
+                  <span class="visually-hidden">Назад</span>
                 </a>
               </li>
               <li class="pagination__item">
                 <a class="pagination__link" href="#">1</a>
               </li>
-              <li class="pagination__item">
-                <a class="pagination__link pagination__link--current" href="#">2</a>
+              <li class="pagination__item pagination__item--current">
+                <a class="pagination__link" href="#">2</a>
               </li>
               <li class="pagination__item">
                 <a class="pagination__link" href="#">3</a>
               </li>
               <li class="pagination__item pagination__item--forward">
                 <a class="pagination__link" href="#">
-                  <span class="pagination__text">Вперед</span>
+                  <span class="visually-hidden">Вперед</span>
                 </a>
               </li>
             </ul>

@@ -36,4 +36,14 @@
       color: $main-color;
     }
   }
+
+  &--disabled,
+  &:disabled {
+    background-color: $color-first;
+  }
+
+  &--secondary-disabled {
+    background-color: $color-secondary;
+    color: $main-color;
+  }
 }

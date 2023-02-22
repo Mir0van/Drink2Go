@@ -1,0 +1,173 @@
+.pagination {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  column-gap: 20px;
+  width: 280px;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    justify-content: end;
+  }
+}
+
+.pagination__item {
+  width: 40px;
+  height: 40px;
+  background-color: $main-color;
+  color: $color-brand;
+  border-radius: 4px;
+
+  &--current {
+    background-color: $color-tertiary;
+    color: $main-color-text;
+
+    .pagination__link {
+      font-weight: 600;
+    }
+  }
+
+  &--back,
+  &--forward {
+    .pagination__link::before,
+    .pagination__link::after {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 8px;
+      background-color: $color-brand;
+      left: 50%;
+      z-index: 1;
+
+      @media (min-width: $tablet-width) {
+        display: block;
+        position: static;
+        content: none;
+        height: auto;
+        width: auto;
+        background-color: transparent;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      .pagination__link {
+        padding: 0 20px;
+      }
+    }
+  }
+
+  &--back,
+  &--forward {
+    .pagination__link::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+      top: 18px;
+      transition: transform 0.1s;
+    }
+  }
+
+  &--back,
+  &--forward {
+    .pagination__link::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+      top: 22px;
+      transition: transform 0.1s;
+    }
+  }
+
+  &--back {
+    .pagination__link::before {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  &--back {
+    .pagination__link::after {
+      transform: translate(-50%, -50%) rotate(45deg);
+
+      @media (min-width: $tablet-width) {
+        content: "Назад";
+        transform: none;
+      }
+
+    }
+    
+    @media (min-width: $tablet-width) {
+      width: 91px;
+    }
+  }
+
+  &--forward {
+    .pagination__link::after {
+      @media (min-width: $tablet-width) {
+        content: "Вперед";
+        transform: none;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 104px;
+    }
+  }
+
+  &--hidden {
+    background-color: transparent;
+
+    .pagination__link {
+      display: none;
+    }
+  }
+
+  &--disabled,
+  &:disabled {
+    background-color: $color-secondary;
+    color: $main-color;
+
+    .pagination__link {
+      font-weight: 400;
+    }
+  }
+}
+
+.pagination__link {
+  @include font-values(400, 16px, 1.50, inherit);
+  text-decoration: none;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-radius: 4px;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $color-brand-tertiary;
+    color: $main-color;
+    outline: none;
+
+    &::before,
+    &::after {
+      background-color: $main-color;
+    }
+  }
+
+  &:active {
+    background-color: $color-brand-quaternary;
+    color: $main-color;
+
+    &::before,
+    &::after {
+      background-color: $main-color;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &:hover,
+    &:focus-visible,
+    &:active {
+      &::before,
+      &::after {
+        background-color: transparent;
+      }
+    }
+  }
+}
+

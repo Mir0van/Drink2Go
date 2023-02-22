@@ -1,0 +1,74 @@
+.card {
+  padding: 20px;
+  padding-top: 40px;
+  background-color: $main-color;
+  display: grid;
+  grid-template-columns: 1fr 141px;
+
+  &:hover {
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 30px;
+    padding-top: 50px;
+  }
+}
+
+.card__link {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: calc(100% + 40px);
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 29px;
+  }
+}
+
+.card__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.card__link-title {
+  @include font-values(700, 18px, 1.78);
+  grid-column: 1 / -1;
+  text-decoration: none;
+  letter-spacing: -2px;
+  margin-bottom: 2px;
+
+  @media (min-width: $tablet-width) {
+    @include font-values(700, 23px, 1.50);
+    margin-bottom: 7px;
+  }
+}
+
+.card__title {
+  margin: 0;
+}
+
+.card__description {
+  grid-column: 1 / -1;
+  margin: 0;
+  margin-bottom: 16px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.card__price {
+  @include font-values(600, 20px, 1.60);
+  margin-top: 2px;
+}
+
+.card__button {
+  font-size: 14px;
+  line-height: 1.43;
+  text-align: right;
+  padding-left: 40px;
+  background-image: url("../../img/icons-background/card-secondary.svg");
+  background-repeat: no-repeat;
+  background-position: 20px 50%;
+}
