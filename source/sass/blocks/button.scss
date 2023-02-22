@@ -3,17 +3,37 @@
   display: block;
   text-align: center;
   background-color: $color-brand;
+  border: none;
   border-radius: 4px;
   padding: 8px 20px;
   cursor: pointer;
   text-decoration: none;
   transition: 0.1s;
 
-  &:hover {
+  &:hover,
+  &:focus-visible {
     background-color: $color-brand-tertiary;
+    outline: none;
   }
 
   &:active {
     background-color: $color-brand-quaternary;
+  }
+
+  &--secondary {
+    background-color: $main-color;
+    color: $color-brand;
+
+    &:hover,
+    &:focus-visible {
+      background-color: $color-brand-tertiary;
+      color: $main-color;
+      outline: none;
+    }
+
+    &:active {
+      background-color: $color-brand-quaternary;
+      color: $main-color;
+    }
   }
 }

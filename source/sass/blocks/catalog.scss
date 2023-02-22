@@ -1,0 +1,89 @@
+.catalog {
+  padding-top: 50px;
+  background-color: $color-tertiary;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 100px;
+  }
+}
+
+.catalog__container {
+  @media (min-width: $desktop-width) {
+    width: 1360px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 318px 1fr;
+    column-gap: 30px;
+    grid-template-areas:
+    "title title"
+    "description description"
+    "filter cards";
+  }
+}
+
+.catalog__title {
+  @include font-values(700, 12px, 1.33, $color-brand);
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0 20px;
+
+  @media (min-width: $desktop-width) {
+    grid-area: title;
+  }
+}
+
+.catalog__description {
+  @include font-values(700, 24px, 1.50);
+  text-align: center;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0 20px;
+
+  @media (min-width: $tablet-width) {
+    @include font-values(700, 42px, 1.52);
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: description;
+    margin-bottom: 40px;
+  }
+}
+
+.catalog__filter {
+  padding: 0 20px;
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: filter;
+  }
+}
+
+.catalog__cards {
+  padding: 0 20px;
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-area: cards;
+  }
+}
+
+.catalog__list {
+  @include reset-list();
+}
+
+.catalog__pagination {
+  @include reset-list();
+}

@@ -1,12 +1,15 @@
 .advantages {
   padding-top: 50px;
+  padding-bottom: 60px;
 
   @media (min-width: $tablet-width) {
     padding-top: 60px;
+    padding-bottom: 100px;
   }
 
   @media (min-width: $desktop-width) {
     padding-top: 100px;
+    padding-bottom: 120px;
   }
 }
 
@@ -151,5 +154,7 @@
 
   @media (min-width: $desktop-width) {
     grid-column: auto;
+    letter-spacing: -0.5px;
+    line-height: 1.4;
   }
 }

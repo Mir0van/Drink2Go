@@ -1,0 +1,133 @@
+.form {
+  display: grid;
+  column-gap: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    column-gap: 19px;
+    row-gap: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: auto;
+    row-gap: 32px;
+  }
+}
+
+.form__group {
+  @include font-values(400, 16px, 1.50);
+  border: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 24px;
+
+  &--radio {
+    margin-bottom: 21px;
+
+    .form__legend {
+      margin-bottom: 22px;
+    }
+  }
+
+  &--checkbox {
+    margin-bottom: 34px;
+
+    .form__legend {
+      margin-bottom: 21px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+
+    &--range {
+      max-width: 300px;
+      justify-self: end;
+    }
+
+    &--radio {
+      margin-bottom: 0;
+      transform: translateX(-11px);
+      justify-self: center;
+
+      .form__legend {
+        margin-bottom: 19px;
+      }
+    }
+
+    &--checkbox {
+      margin-bottom: 0;
+
+      .form__legend {
+        margin-bottom: 19px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--range {
+      justify-self: auto;
+      max-width: none;
+    }
+
+    &--radio {
+      transform: translateX(0);
+      justify-self: auto;
+    }
+
+    &--checkbox {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+.form__legend {
+  @include font-values(600, 16px, 1.50);
+  padding: 0;
+  margin: 0;
+  margin-bottom: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 29px;
+  }
+}
+
+.form__wrapper-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 26px;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    flex-direction: row;
+    justify-self: center;
+    column-gap: 32px;
+    transform: translateX(-28px);
+  }
+
+  @media (min-width: $desktop-width) {
+    transform: translateX(0);
+    column-gap: 27px;
+    justify-self: auto;
+  }
+}
+
+.form__button {
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.85;
+  font-weight: 400;
+  padding: 10px 15px;
+
+  &--reset{
+    font-size: 14px;
+  }
+
+  @media (min-width: $tablet-width) {
+    line-height: 1.71;
+    font-size: 14px;
+    padding: 8px 4px;
+  }
+}

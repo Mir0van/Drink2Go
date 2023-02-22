@@ -1,0 +1,72 @@
+.radio {
+  @include reset-list();
+  display: grid;
+  row-gap: 22px;
+
+  @media (min-width: $tablet-width) {
+    row-gap: 20px;
+  }
+}
+
+.radio__label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.radio__control-mark {
+  position: relative;
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-color: $main-color;
+  border: 2px solid $color-first;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-right: 10px;
+  transition: border-color 0.2s ease;
+}
+.radio__input[type="radio"]:checked + .radio__control-mark {
+  border-color: $color-brand;
+}
+
+.radio__input[type="radio"]:checked + .radio__control-mark::before,
+.radio__input[type="radio"]:hover + .radio__control-mark::before,
+.radio__input[type="radio"]:focus-visible + .radio__control-mark::before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $color-brand;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: background-color 0.2s ease;
+}
+
+.radio__input[type="radio"]:hover + .radio__control-mark,
+.radio__input[type="radio"]:focus-visible + .radio__control-mark {
+  border-color: $color-brand;
+  transition: border-color 0.2s ease;
+  cursor: pointer;
+}
+
+.radio__input[type="radio"]:hover + .radio__control-mark::before,
+.radio__input[type="radio"]:focus-visible + .radio__control-mark::before {
+  background-color: rgba($color-brand, 25%);
+  transition: background-color 0.2s ease;
+}
+
+.radio__input[type="radio"]:disabled + .radio__control-mark {
+  border-color: $color-secondary;
+  cursor: no-drop;
+}
+
+.radio__input[type="radio"]:disabled + .radio__control-mark::before {
+  background-color: $color-secondary;
+}
+
+.radio__input[type="radio"]:disabled ~ .radio__control-description {
+  color: $color-secondary;
+}
