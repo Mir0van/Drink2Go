@@ -13,7 +13,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    // width: 94.5%;
     width: 1360px;
     padding: 0;
     margin: 0 auto;
@@ -74,7 +73,6 @@
     .main-nav__toogle-icon::after {
       background-color: $color-brand;
     }
-
   }
 
   &:active {

@@ -48,6 +48,18 @@
       }
     }
 
+    .pagination__link::before {
+      transform: translate(-50%, -50%) rotate(45deg);
+      top: 18px;
+      transition: transform 0.1s;
+    }
+
+    .pagination__link::after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+      top: 22px;
+      transition: transform 0.1s;
+    }
+
     @media (min-width: $tablet-width) {
       .pagination__link {
         padding: 0 20px;
@@ -55,31 +67,11 @@
     }
   }
 
-  &--back,
-  &--forward {
-    .pagination__link::before {
-      transform: translate(-50%, -50%) rotate(45deg);
-      top: 18px;
-      transition: transform 0.1s;
-    }
-  }
-
-  &--back,
-  &--forward {
-    .pagination__link::after {
-      transform: translate(-50%, -50%) rotate(-45deg);
-      top: 22px;
-      transition: transform 0.1s;
-    }
-  }
-
   &--back {
     .pagination__link::before {
       transform: translate(-50%, -50%) rotate(-45deg);
     }
-  }
 
-  &--back {
     .pagination__link::after {
       transform: translate(-50%, -50%) rotate(45deg);
 
@@ -87,9 +79,8 @@
         content: "Назад";
         transform: none;
       }
-
     }
-    
+
     @media (min-width: $tablet-width) {
       width: 91px;
     }
@@ -128,7 +119,7 @@
 }
 
 .pagination__link {
-  @include font-values(400, 16px, 1.50, inherit);
+  @include font-values(400, 16px, 1.5, inherit);
   text-decoration: none;
   position: relative;
   display: flex;
@@ -170,4 +161,3 @@
     }
   }
 }
-

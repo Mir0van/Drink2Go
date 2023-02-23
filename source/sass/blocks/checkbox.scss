@@ -46,10 +46,6 @@
 .checkbox__input[type="checkbox"]:focus-visible + .checkbox__control-mark {
   border-color: $color-brand;
   cursor: pointer;
-}
-
-.checkbox__input[type="checkbox"]:hover + .checkbox__control-mark,
-.checkbox__input[type="checkbox"]:focus-visible + .checkbox__control-mark {
   background-color: rgba($color-brand, 25%);
   outline: 2px solid $color-brand-tertiary;
   outline-offset: -2px;

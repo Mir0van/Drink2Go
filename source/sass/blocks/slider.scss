@@ -134,7 +134,7 @@
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    @include font-values(400, 20px, 1.60);
+    @include font-values(400, 20px, 1.6);
     max-width: 850px;
   }
 

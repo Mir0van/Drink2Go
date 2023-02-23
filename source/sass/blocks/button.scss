@@ -1,5 +1,5 @@
 .button {
-  @include font-values(400, 16px, 1.50, $main-color);
+  @include font-values(400, 16px, 1.5, $main-color);
   display: block;
   text-align: center;
   background-color: $color-brand;

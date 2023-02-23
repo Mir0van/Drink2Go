@@ -34,7 +34,8 @@
     "lint": "npm run editorconfig && npm run stylelint && npm run w3c && npm run bemlinter",
     "start": "gulp runDev",
     "build": "gulp buildProd",
-    "preview": "gulp buildProd && gulp startServer"
+    "preview": "gulp buildProd && gulp startServer",
+    "publish": "gulp buildProd && gh-pages -d build"
   },
   "browserslist": [
     "last 2 versions",
@@ -53,5 +54,8 @@
   "engines": {
     "node": ">=16.13.0"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "gh-pages": "^5.0.0"
+  }
 }

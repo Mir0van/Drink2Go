@@ -16,7 +16,7 @@
 }
 
 .form__group {
-  @include font-values(400, 16px, 1.50);
+  @include font-values(400, 16px, 1.5);
   border: none;
   padding: 0;
   margin: 0;
@@ -83,7 +83,7 @@
 }
 
 .form__legend {
-  @include font-values(600, 16px, 1.50);
+  @include font-values(600, 16px, 1.5);
   padding: 0;
   margin: 0;
   margin-bottom: 32px;
@@ -121,7 +121,7 @@
   font-weight: 400;
   padding: 10px 15px;
 
-  &--reset{
+  &--reset {
     font-size: 14px;
   }
 

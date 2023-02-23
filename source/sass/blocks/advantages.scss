@@ -33,7 +33,7 @@
 }
 
 .advantages__description {
-  @include font-values(700, 24px, 1.50);
+  @include font-values(700, 24px, 1.5);
   text-align: center;
   margin: 0;
   margin-bottom: 35px;
@@ -86,19 +86,19 @@
   }
 
   &--speed::before {
-    background-image: url("../../img/icons-background/clock.svg")
+    background-image: url("../../img/icons-background/clock.svg");
   }
 
   &--comfort::before {
-    background-image: url("../../img/icons-background/shield.svg")
+    background-image: url("../../img/icons-background/shield.svg");
   }
 
   &--energy::before {
-    background-image: url("../../img/icons-background/lightning.svg")
+    background-image: url("../../img/icons-background/lightning.svg");
   }
 
   &--ecology::before {
-    background-image: url("../../img/icons-background/leaf.svg")
+    background-image: url("../../img/icons-background/leaf.svg");
   }
 
   @media (min-width: $tablet-width) {
@@ -139,7 +139,7 @@
   margin-bottom: 4px;
 
   @media (min-width: $tablet-width) {
-    @include font-values(700, 24px, 1.50);
+    @include font-values(700, 24px, 1.5);
     margin-bottom: 0;
   }
 }
@@ -148,7 +148,7 @@
   margin: 0;
 
   @media (min-width: $tablet-width) {
-    @include font-values(400, 16px, 1.50);
+    @include font-values(400, 16px, 1.5);
     grid-column: 2 / -1;
   }
 

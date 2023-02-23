@@ -26,6 +26,7 @@
   margin-right: 10px;
   transition: border-color 0.2s ease;
 }
+
 .radio__input[type="radio"]:checked + .radio__control-mark {
   border-color: $color-brand;
 }

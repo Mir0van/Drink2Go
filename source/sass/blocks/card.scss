@@ -6,7 +6,7 @@
   grid-template-columns: 1fr 141px;
 
   &:hover {
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
   }
 
   @media (min-width: $tablet-width) {
@@ -39,7 +39,7 @@
   margin-bottom: 2px;
 
   @media (min-width: $tablet-width) {
-    @include font-values(700, 23px, 1.50);
+    @include font-values(700, 23px, 1.5);
     margin-bottom: 7px;
   }
 }
@@ -59,7 +59,7 @@
 }
 
 .card__price {
-  @include font-values(600, 20px, 1.60);
+  @include font-values(600, 20px, 1.6);
   margin-top: 2px;
 }
 

@@ -31,7 +31,6 @@
 
   @media (min-width: $tablet-width) {
     padding: 0;
-    padding-top: 20px;
     padding-top: 40px;
     grid-column: 1 / -1;
     border-bottom: none;
@@ -140,7 +139,7 @@
 .main-footer__list {
   @include reset-list();
   display: grid;
-  row-gap: 16px
+  row-gap: 16px;
 }
 
 .main-footer__link {
