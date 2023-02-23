@@ -1,0 +1,245 @@
+.main-footer {
+  @media (min-width: $desktop-width) {
+    padding-top: 48px;
+    padding-bottom: 40px;
+  }
+}
+
+.main-footer__container {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 20px;
+    padding-bottom: 40px;
+    gap: 30px 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(4, 1fr);
+    width: 1360px;
+    margin: 0 auto;
+    padding: 0;
+    row-gap: 20px;
+  }
+}
+
+.main-footer__images-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid $color-brand-secondary;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    padding-top: 20px;
+    padding-top: 40px;
+    grid-column: 1 / -1;
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
+    grid-column: auto;
+    padding: 0;
+    align-self: start;
+    transform: translateY(-12px);
+  }
+}
+
+.main-footer__logo-wrapper {
+  @media (min-width: $desktop-width) {
+    margin-bottom: 14px;
+  }
+}
+
+.main-footer__logo {
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    width: 170px;
+    transform: translateY(3px);
+  }
+}
+
+.main-footer__description {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    margin: 0;
+    margin-bottom: 50px;
+  }
+}
+
+.main-footer__list-social {
+  @include reset-list();
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 40px);
+  justify-content: end;
+  column-gap: 20px;
+  row-gap: 10px;
+  width: 70%;
+
+  @media (min-width: $desktop-width) {
+    justify-content: start;
+  }
+}
+
+.main-footer__item-social {
+  .main-footer__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+
+    &:hover .main-footer__icon {
+      fill: $color-brand;
+    }
+
+    &:focus-visible .main-footer__icon {
+      fill: $color-brand;
+    }
+
+    &:focus-visible,
+    &:active {
+      background-color: $color-brand-secondary;
+      border-radius: 4px;
+      outline: none;
+    }
+  }
+}
+
+.main-footer__icon {
+  display: block;
+}
+
+.main-footer__wrapper {
+  padding: 20px;
+  padding-bottom: 26px;
+  border-bottom: 1px solid $color-brand-secondary;
+
+  &--last {
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    border-bottom: none;
+    padding: 0;
+  }
+}
+
+.main-footer__title {
+  @include font-values(700, 14px, 1.43, $color-brand);
+  letter-spacing: 0.3px;
+  margin: 0;
+  margin-bottom: 18px;
+  padding: 0;
+}
+
+.main-footer__list {
+  @include reset-list();
+  display: grid;
+  row-gap: 16px
+}
+
+.main-footer__link {
+  @include font-values(500, 12px, 1.33);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+
+  &:hover,
+  &:focus-visible {
+    color: $color-brand-tertiary;
+  }
+
+  &:active {
+    color: $color-brand-quaternary;
+  }
+}
+
+.main-footer__address {
+  font-style: normal;
+  letter-spacing: -0.1px;
+  padding-top: 2px;
+}
+
+.main-footer__location {
+  margin: 0;
+  margin-bottom: 16px;
+  display: flex;
+
+  &::before {
+    content: "";
+    width: 13px;
+    height: 16px;
+    background-image: url("../../img/icons-background/map-mark.svg");
+    flex-shrink: 0;
+    margin-right: 6px;
+    margin-top: 2px;
+  }
+
+  @media (max-width: $max-mobile-width) {
+    width: 260px;
+  }
+}
+
+.main-footer__tel {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+
+  &::before {
+    content: "";
+    width: 13px;
+    height: 16px;
+    background-image: url("../../img/icons-background/phone.svg");
+    flex-shrink: 0;
+    margin-right: 6px;
+    margin-top: 2px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: $color-brand-tertiary;
+  }
+
+  &:active {
+    color: $color-brand-quaternary;
+  }
+}
+
+.main-footer__link-copyright {
+  @include font-values(400, 12px, 1.33, $color-first);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 4px;
+  text-decoration: none;
+  padding: 20px;
+  padding-bottom: 27px;
+
+  &:hover,
+  &:focus-visible {
+    color: $color-brand;
+
+    .main-footer__icon {
+      fill: $color-brand;
+    }
+  }
+
+  &:active {
+    color: $color-brand-quaternary;
+
+    .main-footer__icon {
+      fill: $color-brand-quaternary;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    padding-top: 7px;
+    grid-column: 1 / -1;
+  }
+}

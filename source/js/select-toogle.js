@@ -19,7 +19,6 @@ function selectorEscKeydownHandler (evt) {
 function clickHandler (evt) {
   if (!evt.target.closest('.catalog__select')) {
     scrollHandler();
-    document.removeEventListener('click', clickHandler);
   }
 }
 

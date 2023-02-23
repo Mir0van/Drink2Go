@@ -124,6 +124,7 @@
   padding: 8px 10px;
   appearance: none;
 
+
   &::placeholder {
     color: $color-first;
   }
@@ -139,4 +140,10 @@
     background-color: $color-tertiary;
     cursor: no-drop;
   }
+}
+
+.range__input::-webkit-outer-spin-button,
+.range__input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
