@@ -286,16 +286,27 @@
             </form>
           </div>
           <div class="catalog__cards">
-            <div class="catalog__select-wrapper">
+            <div class="catalog__select-wrapper select">
               <span class="catalog__select-description">Сортировка:</span>
-              <div class="catalog__select-container">
-                <select class="catalog__select catalog__select--closed" name="sorting">
-                  <option value="default">по умолчанию</option>
-                  <option value="cheap">сначала дорогие</option>
-                  <option value="expensive">сначала дешёвые</option>
-                  <option value="high-rating">высокий рейтинг</option>
-                </select>
-                <span class="catalog__select-decorate"></span>
+              <div class="select__wrapper">
+                <div class="select__button  select__button--closed">
+                  <span class="select__text-button">по умолчанию</span>
+                  <span class="select__icon"></span>
+                </div>
+                <ul class="select__options">
+                  <li class="select__option">
+                    <span class="select__option-text select__option-text--selected">по умолчанию</span>
+                  </li>
+                  <li class="select__option">
+                    <span class="select__option-text">сначала дорогие</span>
+                  </li>
+                  <li class="select__option">
+                    <span class="select__option-text">сначала дешёвые</span>
+                  </li>
+                  <li class="select__option">
+                    <span class="select__option-text">высокий рейтинг</span>
+                  </li>
+                </ul>
               </div>
             </div>
             <ul class="catalog__list">

@@ -86,61 +86,6 @@
   }
 }
 
-.catalog__select-wrapper {
-  @include font-values(600, 16px, 1.5);
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  margin-bottom: 16px;
-  letter-spacing: -0.1px;
-
-  @media (min-width: $tablet-width) {
-    margin-bottom: 25px;
-  }
-}
-
-.catalog__select-container {
-  position: relative;
-
-  @media (min-width: $tablet-width) {
-    margin-left: 5px;
-  }
-}
-
-.catalog__select-decorate {
-  &::before,
-  &::after {
-    position: absolute;
-    content: "";
-    height: 2px;
-    width: 8px;
-    background-color: $color-brand;
-    top: 50%;
-    right: 0;
-    z-index: 1;
-  }
-
-  &::before {
-    transform: translate(-50%, -50%) rotate(45deg);
-    right: 6px;
-    transition: transform 0.1s;
-  }
-
-  &::after {
-    transform: translate(-50%, -50%) rotate(-45deg);
-    right: 1px;
-    transition: transform 0.1s;
-  }
-}
-
-.catalog__select--opened + .catalog__select-decorate::before {
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-.catalog__select--opened + .catalog__select-decorate::after {
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
 .catalog__select {
   @include font-values(600, 16px, 1.5, $color-brand);
   font-family: inherit;

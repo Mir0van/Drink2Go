@@ -1,0 +1,138 @@
+.select {
+  @include font-values(600, 16px, 1.5);
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 16px;
+  letter-spacing: -0.1px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 25px;
+  }
+}
+
+.select__wrapper {
+  position: relative;
+}
+
+.select__button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 5px;
+  }
+}
+
+.select__text-button {
+  color: $color-brand;
+  display: block;
+  padding: 4px 10px;
+  padding-right: 26px;
+  margin-left: 10px;
+  border-radius: 4px;
+
+  &:hover {
+    background-color: $color-brand-secondary;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-right: 30px;
+    margin-left: 5px;
+  }
+}
+
+.select__icon {
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 8px;
+    background-color: $color-brand;
+    top: 50%;
+    right: 0;
+    z-index: 1;
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+    right: 6px;
+    transition: transform 0.1s;
+
+    @media (min-width: $tablet-width) {
+      right: 9px;
+    }
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+    right: 1px;
+    transition: transform 0.1s;
+
+    @media (min-width: $tablet-width) {
+      right: 4px;
+    }
+  }
+}
+
+.select__button--opened .select__icon::before {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.select__button--opened .select__icon::after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.select__button--closed + .select__options {
+  display: none;
+}
+
+.select__options {
+  @include reset-list();
+  display: block;
+  position: absolute;
+  z-index: 10;
+  top: 42px;
+  left: -15px;
+  box-shadow: 0 0 10px 1px rgb(0 0 0 / 20%);
+  min-width: 190px;
+  background-color: transparent;
+  border-radius: 4px;
+}
+
+.select__option {
+  width: 100%;
+}
+
+.select__option:first-child .select__option-text {
+  border-radius: 4px 4px 0px 0px;
+
+}
+
+.select__option:last-child .select__option-text {
+  border-radius: 0px 0px 4px 4px;
+
+}
+
+.select__option-text {
+  @include font-values(400, 16px, 1.5);
+  padding: 8px 20px 9px;
+  background-color: $main-color;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+
+  &--selected {
+    background-color: $color-brand;
+    color: $main-color;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $color-brand-secondary;
+    color: $main-color-text;
+  }
+}
