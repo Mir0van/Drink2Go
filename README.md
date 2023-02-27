@@ -1,3 +1,9 @@
+# Личный проект «Drink2Go»
+
+* Студент: [Владимир Ванин](https://up.htmlacademy.ru/javascript/26/user/1952407).
+
+---
+
 # Краткая инструкция по работе
 
 1. [Установить node.js](https://nodejs.org/download/release/latest-v16.x/). Сборка работает на 16 версии
